@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"swc src/index.ts"
+    "dev": "swc src/index.ts"
   },
   "author": "Kong",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.162",
+    "husky": "^7.0.4",
     "swc-loader": "^0.1.15"
   }
 }
