@@ -1,5 +1,11 @@
+import Home from 'modules/home'
+
 function App() {
-  return <div>hello world</div>
+  return (
+    <div>
+      <Home />
+    </div>
+  )
 }
 
 export default App
