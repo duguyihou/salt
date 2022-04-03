@@ -1,27 +1,13 @@
-import { Canvas, MeshProps } from '@react-three/fiber'
-import { useRef } from 'react'
-import * as THREE from 'three'
+import { Canvas } from '@react-three/fiber'
 
-function Box(props: MeshProps) {
-  const { position } = props
-  const mesh = useRef<THREE.Mesh>(null!)
-  return (
-    <mesh position={position} ref={mesh}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial />
-    </mesh>
-  )
-}
+import Model from './Scene'
+
 function Home() {
   return (
-    <div>
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
-      </Canvas>
-    </div>
+    <Canvas camera={{ position: [-100, -100, 100], fov: 100 }}>
+      <ambientLight />
+      <Model position={[50, 0, 0]} />
+    </Canvas>
   )
 }
 
